@@ -1,0 +1,84 @@
+/* General Styles */
+.card-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin: 20px auto;
+  max-width: 1000px;
+  padding: 0 10px; /* Added padding to ensure proper spacing on smaller screens */
+}
+
+.card {
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  width: 150px;
+  margin: 15px;
+  text-align: center;
+  padding: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  /* background-color: white; */
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card-image {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+.card-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 0;
+  color:white;
+}
+
+h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  /* color: hsl(0, 0%, 27%); */
+  color: white;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .card-container {
+      justify-content: space-between; /* Adjusts spacing for smaller screens */
+      margin: 15px auto; /* Reduced margin */
+      margin-left: 170px;
+      color: #ccc;
+  }
+
+  .card {
+      width: 45%; /* Cards will take up nearly half the container's width */
+      margin: 10px; /* Reduced margin to fit more cards */
+  }
+
+  .card-title {
+      font-size: 16px; /* Slightly smaller font size */
+  }
+}
+
+@media (max-width: 480px) {
+  .card-container {
+      justify-content: center; /* Center cards on very small screens */
+  }
+
+  .card {
+      width: 80%; /* Cards will take up most of the container's width */
+      margin: 10px 0; /* Reduced margin for better spacing */
+  }
+
+  .card-title {
+      font-size: 14px; /* Smaller font size for better readability */
+  }
+
+  h2 {
+      font-size: 20px; /* Slightly smaller heading */
+  }
+}

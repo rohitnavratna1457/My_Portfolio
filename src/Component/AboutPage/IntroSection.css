@@ -1,0 +1,68 @@
+.intro-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 70vh;
+    padding: 20px;
+    margin-top: 15px;
+    box-sizing: border-box;
+    gap: 20px; /* Adds space between text and image */
+    background-color: #1a1a2e; /* Dark background to match the theme */
+    color: #ffffff; /* White text color for better visibility */
+}
+
+.intro-text {
+    flex: 1;
+    text-align: left;
+    font-size: 1.2em;
+    line-height: 1.6;
+    animation: fadeIn 2s ease-out;
+}
+
+.intro-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: scaleUp 2s ease-out;
+}
+
+.intro-image img {
+    width: 80%;
+    max-width: 500px;
+    height: auto; /* Ensure the height is automatically adjusted to keep the aspect ratio */
+    border-radius: 20px; /* Slightly rounded corners for a smooth appearance */
+    object-fit: cover; /* Ensures the image covers the container without distortion */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Adds a shadow effect to the image */
+}
+
+.name-highlight {
+    color: #a64ac9; /* Highlight color matching the theme */
+    font-weight: bold;
+}
+
+.cursor {
+    font-weight: bold;
+}
+
+h2 {
+    font-size: 2.5em;
+    margin-bottom: 0.5em;
+    animation: textGlow 2s ease-out infinite alternate;
+    color: #9b5de5;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes scaleUp {
+    from { transform: scale(0.9); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+@keyframes textGlow {
+    from { text-shadow: 0 0 10px #9b5de5, 0 0 20px #9b5de5, 0 0 30px #9b5de5; }
+    to { text-shadow: 0 0 20px #f15bb5, 0 0 30px #f15bb5, 0 0 40px #f15bb5; }
+}

@@ -1,0 +1,107 @@
+/* General Footer Styles */
+.footer-container {
+  /* background: #333; */
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+.footer-content {
+  margin-bottom: 20px;
+}
+
+.footer-content h3 {
+  margin: 10px 0;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 20px; /* Space between icons */
+  margin-bottom: 20px;
+}
+
+.social-icon img {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  transition: transform 0.3s, opacity 0.3s;
+}
+
+.social-icon img:hover {
+  transform: scale(1.1);
+  opacity: 0.8;
+}
+
+.footer-bottom {
+  background: #444;
+  color: wheat;
+  padding: 10px;
+  border-top: 1px solid #555;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.footer-bottom h4 {
+  margin: 5px 0;
+}
+
+.footer-bottom p {
+  margin: 5px 0;
+}
+
+.social-icons-bottom {
+  display: flex;
+  gap: 15px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .footer-container {
+      padding: 15px;
+  }
+
+  .social-icons {
+      gap: 15px; /* Reduce space between icons */
+  }
+
+  .social-icon img {
+      height: 45px;
+      width: 45px; /* Slightly smaller icons */
+  }
+
+  .footer-bottom {
+      padding: 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-container {
+      padding: 10px;
+  }
+
+  .social-icons {
+      gap: 10px; /* Further reduce space between icons */
+  }
+
+  .social-icon img {
+      height: 40px;
+      width: 40px; /* Smaller icons for mobile */
+  }
+
+  .footer-bottom {
+      padding: 5px;
+      font-size: 14px; /* Smaller text size for better fit */
+  }
+
+  .footer-bottom h4, .footer-bottom p {
+      margin: 3px 0;
+  }
+
+  .social-icons-bottom {
+      gap: 10px; /* Smaller gap for social icons at the bottom */
+  }
+}

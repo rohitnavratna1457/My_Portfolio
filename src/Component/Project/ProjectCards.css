@@ -1,0 +1,94 @@
+/* Base styles */
+.projects-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px; /* Added padding for better spacing */
+  }
+  
+  .project-card {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 20px;
+    width: 300px;
+    text-align: center;
+    /* background-color: #fff; */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Added transition for smooth hover effect */
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  
+  .project-card:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Deeper shadow on hover */
+  }
+  
+  .project-image {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+  }
+  
+  .buttons {
+    margin-top: 15px;
+  }
+  
+  .button {
+    display: inline-block;
+    margin: 0 10px;
+    padding: 10px 20px;
+    color: #fff;
+    background-color: #007bff;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 14px; /* Adjusted font size */
+  }
+  
+  .button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 1200px) {
+    .projects-container {
+      gap: 15px; /* Reduced gap for medium screens */
+    }
+  
+    .project-card {
+      width: 270px; /* Adjust width for medium screens */
+    }
+  }
+  
+  @media (max-width: 992px) {
+    .projects-container {
+      gap: 10px; /* Reduced gap for smaller screens */
+      padding: 10px; /* Reduced padding for smaller screens */
+    }
+  
+    .project-card {
+      width: 250px; /* Adjust width for smaller screens */
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .projects-container {
+      flex-direction: column; /* Stack cards vertically on very small screens */
+      align-items: center; /* Center align items */
+      gap: 10px; /* Reduced gap */
+    }
+  
+    .project-card {
+      width: 100%; /* Full width for cards on small screens */
+      max-width: 500px; /* Maximum width for readability */
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .button {
+      display: block;
+      margin: 5px auto; /* Center buttons on small screens */
+      width: calc(100% - 20px); /* Full width buttons with padding */
+    }
+  }
+  

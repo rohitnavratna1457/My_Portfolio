@@ -1,0 +1,154 @@
+/* src/components/Home.css */
+
+/* Base Styles */
+.intro-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 50px 20px;
+  background-color: #0b0d19;
+  color: white;
+  min-height: 80vh;
+  flex-wrap: wrap; /* Ensure wrapping on smaller screens */
+}
+
+.intro-text {
+  max-width: 500px;
+  text-align: center; /* Center align text for smaller screens */
+}
+
+.intro-text p {
+  font-size: 24px;
+  margin: 0;
+}
+
+.intro-text h1 {
+  font-size: 48px;
+  margin: 10px 0;
+  font-weight: bold;
+}
+
+.name-highlight {
+  color: #b9ff33;
+}
+
+.intro-text h2 {
+  font-size: 28px;
+  margin: 10px 0;
+}
+
+.cursor {
+  color: #b9ff33;
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0% { opacity: 1; }
+  50% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+.intro-image img {
+  width: 100%; /* Full width on smaller screens */
+  max-width: 400px;
+  border-radius: 20px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.button-container {
+  margin-top: 20px;
+  text-align: center; /* Center buttons for smaller screens */
+}
+
+.download-btn, .hire-btn {
+  background-color: #6c3b8d;
+  color: white;
+  padding: 12px 24px;
+  font-size: 18px;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-right: 10px;
+  margin-bottom: 10px; /* Add space between buttons on smaller screens */
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.download-btn:hover {
+  background-color: #805aa9;
+  transform: scale(1.05);
+}
+
+.hire-btn {
+  background-color: #b9ff33;
+  color: #0b0d19;
+}
+
+.hire-btn:hover {
+  background-color: #9dd62b;
+  transform: scale(1.05);
+}
+
+.download-btn:active, .hire-btn:active {
+  transform: scale(0.95);
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .intro-container {
+    flex-direction: column;
+    padding: 20px 10px;
+    min-height: auto; /* Allow content to dictate height on small screens */
+  }
+
+  .intro-text {
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .intro-text h1 {
+    font-size: 36px;
+  }
+
+  .intro-text p {
+    font-size: 20px;
+  }
+
+  .intro-text h2 {
+    font-size: 24px;
+  }
+
+  .intro-image img {
+    max-width: 300px;
+    margin-bottom: 20px; /* Add margin below the image on smaller screens */
+  }
+
+  .download-btn, .hire-btn {
+    font-size: 16px;
+    padding: 10px 20px;
+    margin-right: 0; /* Remove right margin to center buttons */
+  }
+}
+
+@media (max-width: 480px) {
+  .intro-text h1 {
+    font-size: 28px;
+  }
+
+  .intro-text p {
+    font-size: 18px;
+  }
+
+  .intro-text h2 {
+    font-size: 20px;
+  }
+
+  .intro-image img {
+    max-width: 250px;
+  }
+
+  .download-btn, .hire-btn {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+}

@@ -1,0 +1,78 @@
+/* General Styles */
+.container {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  margin: 0 auto;
+  max-width: 800px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 1s forwards;
+  /* background: #f4f4f4;  */
+}
+
+h2 {
+  font-size: 2.5em;
+  color: white; /* Changed color to contrast with the background */
+  margin-bottom: 10px;
+  animation: fadeIn 1s ease-out;
+  text-align: center; /* Center text alignment for headings */
+}
+
+p {
+  font-size: 1.2em;
+  color:white;
+  line-height: 1.6;
+  margin-bottom: 15px;
+  animation: fadeIn 2s ease-out;
+  text-align: justify; /* Justify paragraph text for better readability */
+}
+
+/* Animation Keyframes */
+@keyframes fadeInUp {
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+  }
+  to {
+      opacity: 1;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+      padding: 15px;
+      max-width: 90%; /* Reduced max-width for better fit on smaller screens */
+  }
+
+  h2 {
+      font-size: 2em; /* Slightly smaller font size for headings */
+  }
+
+  p {
+      font-size: 1.1em; /* Slightly smaller font size for paragraphs */
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+      padding: 10px;
+      max-width: 95%; /* Max-width close to full screen width */
+  }
+
+  h2 {
+      font-size: 1.8em; /* Further reduced font size */
+  }
+
+  p {
+      font-size: 1em; /* Further reduced font size */
+  }
+}
