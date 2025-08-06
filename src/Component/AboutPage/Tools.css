@@ -1,84 +1,91 @@
-/* General Styles */
-.card-container {
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  margin: 20px auto;
-  max-width: 1000px;
-  padding: 0 10px; /* Added padding to ensure proper spacing on smaller screens */
-}
-
-.card {
-  border: 1px solid #ccc;
-  border-radius: 10px;
-  width: 150px;
-  margin: 15px;
+.tools-section {
+  padding: 2rem;
+  background: #0b0d19;
+  color: white;
   text-align: center;
-  padding: 15px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
-  /* background-color: white; */
 }
 
-.card:hover {
-  transform: translateY(-5px);
+.tools-title {
+  font-size: 2rem;
+  margin-bottom: 1.2rem;
+  color: #00aaff;
+  position: relative;
 }
 
-.card-image {
-  width: 100px;
-  height: 100px;
-  object-fit: cover;
-  margin-bottom: 10px;
+.tools-title::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: #00aaff;
+  margin: 0.5rem auto 0;
+  border-radius: 2px;
+}
+
+.sub-title {
+  font-size: 1.3rem;
+  margin: 1.2rem 0 1rem;
+  color: #00ffaa;
+}
+
+/* ✅ Card Container */
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 1.2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* ✅ Individual Card */
+.card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 1.2rem;
+  text-align: center;
+  transition: transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
 }
 
 .card-title {
-  font-size: 18px;
+  font-size: 1rem;
+  color: #fff;
   font-weight: bold;
-  margin-top: 0;
-  color:white;
+  margin: 0;
 }
 
-h2 {
-  font-size: 24px;
-  margin-bottom: 20px;
-  /* color: hsl(0, 0%, 27%); */
-  color: white;
+.card:hover {
+  background: rgba(0, 170, 255, 0.2);
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 170, 255, 0.2);
 }
 
-/* Responsive Design */
+/* ✅ Responsive */
+@media (max-width: 1024px) {
+  .card-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
 @media (max-width: 768px) {
   .card-container {
-      justify-content: space-between; /* Adjusts spacing for smaller screens */
-      margin: 15px auto; /* Reduced margin */
-      margin-left: 170px;
-      color: #ccc;
-  }
-
-  .card {
-      width: 45%; /* Cards will take up nearly half the container's width */
-      margin: 10px; /* Reduced margin to fit more cards */
-  }
-
-  .card-title {
-      font-size: 16px; /* Slightly smaller font size */
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
   }
 }
 
 @media (max-width: 480px) {
   .card-container {
-      justify-content: center; /* Center cards on very small screens */
+    grid-template-columns: 1fr;
+    gap: 0.8rem;
   }
 
   .card {
-      width: 80%; /* Cards will take up most of the container's width */
-      margin: 10px 0; /* Reduced margin for better spacing */
+    padding: 1rem;
   }
 
-  .card-title {
-      font-size: 14px; /* Smaller font size for better readability */
-  }
-
-  h2 {
-      font-size: 20px; /* Slightly smaller heading */
+  .tools-title {
+    font-size: 1.7rem;
   }
 }

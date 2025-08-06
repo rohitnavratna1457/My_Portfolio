@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import './Navbar.css';
 import { Link } from 'react-router-dom';
 // import IconsButton from './AboutPage/IconsButton';
+import Project1 from './Project/Project1';
 
 function Navbar() {
   // State to manage the sidebar visibility

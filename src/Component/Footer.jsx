@@ -1,18 +1,18 @@
 import React from 'react';
-import './Footer.css'; // Import the external CSS file
+import './Footer.css';
 import img from './Assets/Wp.png';
 import img1 from './Assets/Fb.webp';
-import img2 from './Assets/Linkdin.png'
-import img3 from './Assets/Git.png'
+import img2 from './Assets/Linkdin.png';
+import img3 from './Assets/Git.png';
 
 function Footer() {
   return (
-    <div className="footer-container">
-      
-      <div className="footer-bottom">
-        <h3>Designed and Developed by Rohit</h3>
-        <p>&copy; 2024</p>
-        <h3>Find me on Social icons</h3>
+    <footer className="footer-container">
+      <div className="footer-content">
+        <h3 className="footer-title">Designed & Developed by <span>Rohit</span></h3>
+        <p className="footer-copy">&copy; 2025 All Rights Reserved</p>
+        
+        <h4 className="footer-subtitle">Find me on</h4>
         <div className="social-icons-bottom">
           <a href="https://wa.me/YOUR_PHONE_NUMBER" target="_blank" rel="noopener noreferrer" className="social-icon">
             <img src={img} alt="WhatsApp" />
@@ -28,7 +28,7 @@ function Footer() {
           </a>
         </div>
       </div>
-    </div>
+    </footer>
   );
 }
 

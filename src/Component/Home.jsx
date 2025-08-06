@@ -9,8 +9,8 @@ const Home = () => {
   const handleDownloadResume = () => {
     // Replace 'resume.pdf' with the path to your actual resume file
     const link = document.createElement('a');
-    link.href = 'https://drive.google.com/file/d/1nXaNGft6gu0MhiDQSUmUwpZQXHZZ3TiZ/view?usp=drive_link';
-    link.download = 'Rohit_Resume.pdf';
+    link.href = 'https://drive.google.com/file/d/1XFeGemYwTnT8xEnHKflPwb8vHH33aJ_K/view?usp=drive_link';
+    link.download = 'Rohit_2.pdf';
     link.click();
   };
 

@@ -1,45 +1,61 @@
 import React from 'react';
-import './Tools.css'
-// import cImage from './path/to/cImage.png'; // Update with your actual image path
-// import cppImage from './path/to/cppImage.png';
-// import javaImage from './path/to/javaImage.png'; // Added missing image for Java
-import img from '../Assets/C.jpeg'
+import './Tools.css';
+
+const devTools = [
+  { name: 'Notepad' },
+  { name: 'Jupyter Notebook' },
+  { name: 'Sublime' },
+  { name: 'Visual Studio' },
+];
+
+const aiTools = [
+  { name: 'OpenAI' },
+  { name: 'Cursor AI' },
+  { name: 'ChatGPT' },
+  { name: 'Claude AI' },
+  { name: 'Gemini (Google AI)' },
+  { name: 'TensorBoard' },
+  { name: 'Kaggle Kernels' },
+  { name: 'Google Colab' },
+  { name: 'Jupyter Notebook' },
+  { name: 'Hugging Face' },
+  { name: 'LangChain' },
+  { name: 'AutoGPT' },
+  { name: 'Weights & Biases' },
+  { name: 'Pinecone' },
+  { name: 'Anthropic AI' },
+  { name: 'Llama 3' },
+  { name: 'DeepMind' },
+  { name: 'Stable Diffusion' },
+  { name: 'MidJourney' },
+  { name: 'Runway ML' },
+];
+
+
 const Tools = () => {
-
-  const skills = [
-    { 
-      name: 'Notepad',
-      image: 'img'
-   },
-    { 
-      name: 'Anaconda',
-       image: 'img'
-     },
-    {
-       name: 'Sumlime',
-       image: 'img' 
-    }, 
-        // Ensure you add the correct path to the image
-    { 
-      name: 'Visual Studio',
-     image: 'img' 
-    },
-   
-  ];
-
   return (
-    <div>
-      <h2 style={{textAlign:"center"}}>Tools I Use</h2>
+    <div className="tools-section">
+      <h2 className="tools-title">Tools I Use</h2>
+
+      <h3 className="sub-title">Development Tools</h3>
       <div className="card-container">
-        {skills.map((skill, index) => (
+        {devTools.map((tool, index) => (
           <div key={index} className="card">
-            {/* <img src={skill.image} alt={skill.name} className="card-image" /> */}
-            <h3 className="card-title">{skill.name}</h3>
+            <h3 className="card-title">{tool.name.toUpperCase()}</h3>
+          </div>
+        ))}
+      </div>
+
+      <h3 className="sub-title">AI Tools</h3>
+      <div className="card-container">
+        {aiTools.map((tool, index) => (
+          <div key={index} className="card">
+            <h3 className="card-title">{tool.name.toUpperCase()}</h3>
           </div>
         ))}
       </div>
     </div>
   );
-}
+};
 
 export default Tools;
